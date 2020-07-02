@@ -24,7 +24,10 @@ Output: 0 = 0
 
 public class SequenceSum {
 
-    public static String showSequence(int value) {
-        return null;
+        public static void showSequence ( int value){
+            
+
+        }
     }
-}
+
+
