@@ -15,9 +15,35 @@ max_rot(56789) should return 68957
 */
 
 
+import java.security.SecureRandom;
+
 public class NumberRotator {
 
     public static long rotate (long n) {
+        if (n==0L)
         return 0;
+        long max=n;
+        long maxTemp;
+        int sing = n<0 ? -1 :1;
+        String strTemp=Long.toString(n*sing);
+
+        char charToMoveEnd=strTemp.charAt(0);
+        for (int i=0;i<strTemp.length();i++){
+            StringBuilder sbRot=new StringBuilder();
+            for (int j=0; j<strTemp.length();j++) {
+                if (j != i) {
+                    sbRot.append(strTemp.charAt(j));
+                } else {
+                    charToMoveEnd = strTemp.charAt(j); //if i==j this is char to move end
+                }
+            }
+            sbRot.append(charToMoveEnd); //add char to end
+            strTemp=sbRot.toString();
+            maxTemp=Long.parseLong(strTemp)*sing;
+            if (maxTemp>max)
+                max = maxTemp;
+        }
+        return max;
     }
+
 }

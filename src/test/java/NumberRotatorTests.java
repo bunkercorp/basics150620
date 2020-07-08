@@ -8,9 +8,14 @@ public class NumberRotatorTests {
     }
     @Test
     public void test() {
-        testing(NumberRotator.rotate(38458215), 85821534);
-        testing(NumberRotator.rotate(195881031), 988103115);
-        testing(NumberRotator.rotate(896219342), 962193428);
-        testing(NumberRotator.rotate(69418307), 94183076);
+        testing(NumberRotator.rotate(38458215L), 85821534L);
+        testing(NumberRotator.rotate(195881031L), 988103115L);
+        testing(NumberRotator.rotate(9896219342L), 9896219342L);
+        testing(NumberRotator.rotate(69418307L), 94183076L);
+        testing(NumberRotator.rotate(56789L), 68957L);
+        testing(NumberRotator.rotate(-56789L), -56789L);
+        testing(NumberRotator.rotate(-1123456L), -1123456L);
+      //  testing(NumberRotator.rotate(null), null);
+
     }
 }
