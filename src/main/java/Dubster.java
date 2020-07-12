@@ -24,8 +24,65 @@ Return the words of the initial song that Polycarpus used to make a dubsteb remi
 
 */
 
+
+
 public class Dubster {
-    public static String songDecoder(String song) {
-        return null;
+
+      public static String songDecoder(String song) {
+        String str = "WUB";
+        int length = song.length();
+        int begIndex1 = 0;
+        int begIndex2 = 0;
+        int begWord = 0;
+        int endWord = 0;
+        boolean flag = false;
+        String [] songw = new String [length];
+        int currentLength = 0;
+        int counter = 0;
+
+        for(int i = 0; i < length ; i++){
+            if ( song.regionMatches(begIndex1,str,begIndex2,str.length()) ){
+               if(flag == true) {
+                   endWord = begIndex1;
+                   songw[currentLength] = song.substring(begWord, endWord);
+                   currentLength++;
+                   flag = false;
+                   counter = 0;
+               }
+                begIndex1 = begIndex1+3;
+            }
+            else{
+                if(counter == 0) {
+                  begWord = begIndex1;
+                }
+                begIndex1++;
+                counter++;
+
+               if(begIndex1 == length) {
+                   songw[currentLength] = song.substring(begWord, begIndex1);
+                   currentLength++;
+               }
+                flag = true;
+            }
+            }
+        StringBuilder songNew = new StringBuilder();
+        for (int i = 0; i < songw.length; i++) {
+            if((songw[i] != null)) {
+                if (songNew.length() == 0) {
+                    songNew.append(songw[i]);
+                } else {
+                    songNew.append(' ').append(songw[i]);
+                }
+            }
+        }
+        String result = songNew.toString();
+        return result;
+      }
+
+    public static void main (String[] args) {
+        System.out.println(songDecoder("WUBWUBIWUBAMWUBWUBX"));
+        System.out.println(songDecoder("WUBWUBABCWUB"));
+        System.out.println(songDecoder("RWUBWUBWUBLWUB"));
+        System.out.println(songDecoder("WUBWUBWUB"));
     }
 }
