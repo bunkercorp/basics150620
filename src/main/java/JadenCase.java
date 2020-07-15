@@ -15,7 +15,20 @@ Note that the Java version expects a return value of null for an empty string or
 
 */
 public class JadenCase {
-  public static String toJadenCase(String phrase) {
-        return null;
+    public static void main(String[] args) {
+        System.out.println(toJadenCase("How can mirrors be real if our eyes aren't real"));
     }
+  public static String toJadenCase(String phrase) {
+
+      StringBuilder capitalize = new StringBuilder();
+      String[] words = phrase.toLowerCase().split(" ");
+      for (String word : words) {
+          String first = word.substring(0, 1).toUpperCase();
+          String all = word.substring(1);
+          capitalize.append(first).append(all).append(" ");
+      }
+      return capitalize.toString().trim();
+  }
+
 }
+
