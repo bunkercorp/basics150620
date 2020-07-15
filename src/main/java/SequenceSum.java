@@ -26,16 +26,16 @@ Output: 0 = 0
 public class SequenceSum {
 
     public static String showSequence(int value) {
-        if (value<0)
-            return value+" < 0";
-        if (value==0)
+        if (value < 0)
+            return value + " < 0";
+        if (value == 0)
             return "0 = 0";
-        final StringBuilder secString=new StringBuilder();
+        final StringBuilder secString = new StringBuilder();
         secString.append("0");
-        int secSum=0;
-        for (int i=1;i<=value;i++){
+        int secSum = 0;
+        for (int i = 1; i <= value; i++) {
             secString.append("+").append(i);
-            secSum=secSum+i; //count sum
+            secSum = secSum + i; //count sum
         }
         secString.append(" = ").append(secSum);
         return secString.toString();

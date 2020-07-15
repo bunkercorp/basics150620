@@ -20,16 +20,16 @@ public class NumberRotator {
         System.out.println(rotate(1234567890));
     }
 
-    public static long rotate (long n) {
+    public static long rotate(long n) {
         if (n == 0)
             return 0;
         long max = n;
         long maxTemp;
-        int sing = n < 0 ? -1 :1;
+        int sing = n < 0 ? -1 : 1;
         String strTemp = Long.toString(n * sing);
 
         char charToMoveEnd = strTemp.charAt(0);
-        for (int i=0; i < strTemp.length(); i++){
+        for (int i = 0; i < strTemp.length(); i++) {
             StringBuilder sbRot = new StringBuilder();
             for (int j = 0; j < strTemp.length(); j++) {
                 if (j != i) {

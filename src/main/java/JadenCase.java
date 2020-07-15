@@ -19,26 +19,27 @@ public class JadenCase {
     public static void main(String[] args) {
         System.out.println(toJadenCase("hello world"));
     }
+
     public static String toJadenCase(String phrase) {
-        if ( phrase == null || phrase.length() <= 0 )
+        if (phrase == null || phrase.length() <= 0)
             return null;
         final StringBuilder resStr = new StringBuilder();
 
         final char firstChar = phrase.charAt(0);
-        final boolean isFirstAlpha = (firstChar >= 'a' && firstChar <= 'z' );
+        final boolean isFirstAlpha = (firstChar >= 'a' && firstChar <= 'z');
         if (isFirstAlpha) {
             char upperFirst = Character.toUpperCase(firstChar);
             resStr.append(upperFirst);
-        }else {
+        } else {
             resStr.append(firstChar);
         }
 
-        for (int i = 1 ; i < phrase.length(); i++) {
+        for (int i = 1; i < phrase.length(); i++) {
             final char candidate = phrase.charAt(i);
             final char beforeCandidate = phrase.charAt(i - 1);
-            final boolean isLowerAlpha =  (candidate >= 'a' && candidate <= 'z' );
-            final boolean isBeforeWordChar = (beforeCandidate >= 'A' && beforeCandidate <= 'Z') || (beforeCandidate >= 'a' && beforeCandidate <= 'z' ) || beforeCandidate=='`' || beforeCandidate== '_' || beforeCandidate=='-' || (beforeCandidate >='0' && beforeCandidate<= '9');
-            if ( isLowerAlpha && !isBeforeWordChar) {
+            final boolean isLowerAlpha = (candidate >= 'a' && candidate <= 'z');
+            final boolean isBeforeWordChar = (beforeCandidate >= 'A' && beforeCandidate <= 'Z') || (beforeCandidate >= 'a' && beforeCandidate <= 'z') || beforeCandidate == '`' || beforeCandidate == '_' || beforeCandidate == '-' || (beforeCandidate >= '0' && beforeCandidate <= '9');
+            if (isLowerAlpha && !isBeforeWordChar) {
                 char upperCandidate = Character.toUpperCase(candidate);
                 resStr.append(upperCandidate);
             } else {
