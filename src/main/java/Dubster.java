@@ -8,7 +8,7 @@ Polycarpus inserts a certain number of words "WUB" before the first word of the 
 after the last word (the number may be zero), and between words (at least one between any pair of neighbouring words),
 and then the boy glues together all the words, including "WUB", in one string and plays the song at the club.
 
-For example, a song with words "I AM X" can transform into a dubstep remix as "WUBWUBIWUBAMWUBWUBX"
+For example, a song with words "I AM X" can transform into a dubstep remix as "WUBIWUBAMWUBWUBX"
 and cannot transform into "WUBWUBIAMWUBX".
 
 Recently, Jonny has heard Polycarpus's new dubstep track, but since he isn't into modern music,

@@ -5,10 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>aqa.study</groupId>
-    <artifactId>basics03022020</artifactId>
+    <artifactId>basics150620</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
-    <description>https://lms.ithillel.ua/groups/5d46f5c09dea364cd2729744/feed</description>
 
     <build>
         <pluginManagement>
