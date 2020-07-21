@@ -1,4 +1,3 @@
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,6 +13,6 @@ final class StdLogger extends Logger {
     }
     public static void main(String[] args) {
         StdLogger stdLogger = new StdLogger();
-        stdLogger.log("privet ");
+        stdLogger.log("privet");
     }
 }
