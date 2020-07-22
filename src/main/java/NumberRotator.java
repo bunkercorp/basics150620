@@ -13,11 +13,17 @@ Calling this function max_rot (or maxRot or ... depending on the language)
 max_rot(56789) should return 68957
 
 */
-
-
 public class NumberRotator {
-
-    public static long rotate (long n) {
-        return 0;
+    public static void main(String[] args) {
+        System.out.println(rotate(56789));
     }
-}
+
+        public static long rotate(long n) {
+            String s = Long.toString(n);
+            for (int g = 0; g < s.length()-1; g++) {
+                s = s.substring(0,g) + s.substring(g+1) + s.charAt(g) ;
+                long b = Long.parseLong(s);
+                if (b > n)  n = b;
+            }return n;
+        }
+    }

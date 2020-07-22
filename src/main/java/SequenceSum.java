@@ -23,8 +23,24 @@ Output: 0 = 0
 */
 
 public class SequenceSum {
+    public static void main(String[] args) {
+        showSequence(6);
+    }
 
     public static String showSequence(int value) {
+        int b, a;
+        if (value == 0) {
+            System.out.println(value + " = 0"); }
+        else if (value < 0) {
+            System.out.println(value + " < 0");
+        }else{
+            b = value * (value - 1) / 2;
+            for (a = 0; a <= value; a++, b++) {
+                if (a == value) System.out.println(a + " = " + b);
+                if (a == value) break;
+                System.out.print(a + " + ");
+            }
+        }
         return null;
     }
 }
