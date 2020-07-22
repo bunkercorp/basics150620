@@ -1,9 +1,8 @@
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public final class StdLogger implements Logger {
-    @Override
-    public void log(String privet) {
+final class StdLogger extends Logger {
+@Override
+ void log(String privet) {
         {
             int a = Thread.currentThread().getStackTrace()[1].getLineNumber();
             String date = new SimpleDateFormat("HH:mm:ss.SSS").format(new Date());
