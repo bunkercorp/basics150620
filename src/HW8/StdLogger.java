@@ -1,5 +1,5 @@
 package HW8;
-//HW8
+//HW Eight
 
 public class StdLogger extends Logger {
     private static StdLogger _instance;
