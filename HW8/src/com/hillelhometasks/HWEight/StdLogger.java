@@ -1,8 +1,11 @@
 package com.hillelhometasks.HWEight;
 
-public class StdLogger extends Logger {
-    private static StdLogger _instance;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+public class StdLogger implements Logger {
+    private static StdLogger _instance;
+    int tik = 0;
     private StdLogger() {
     }
 
@@ -12,8 +15,15 @@ public class StdLogger extends Logger {
         return _instance;
     }
     @Override
-    public void log(String date) {
+    public void log(String date){
         System.out.printf("%s%s\n", logPrefix(), date);
+    }
+
+    @Override
+    public String logPrefix() {
+        String method = Thread.currentThread().getStackTrace()[3].getMethodName();
+        String dateStr = new SimpleDateFormat("HH:mm:ss:SSS").format(new Date());
+        return String.format("%d) %s [%s]: ", ++tik, dateStr, method);
     }
 
     public static void main(String[] args) {
