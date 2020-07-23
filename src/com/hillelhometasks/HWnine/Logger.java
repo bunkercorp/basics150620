@@ -1,5 +1,5 @@
 package com.hillelhometasks.HWnine;
-//HW9
+//HW Nine
 public interface Logger {
 
     void log(String date);
