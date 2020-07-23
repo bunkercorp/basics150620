@@ -1,5 +1,5 @@
 package HW8;
-//HW8
+//HW Eight
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
