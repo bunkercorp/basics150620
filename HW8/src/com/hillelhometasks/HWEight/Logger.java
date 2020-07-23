@@ -1,7 +1,6 @@
 package com.hillelhometasks.HWEight;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+// HW9
 public  interface Logger {
 
     void log(String date);
