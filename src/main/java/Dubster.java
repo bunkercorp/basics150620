@@ -24,35 +24,29 @@ Return the words of the initial song that Polycarpus used to make a dubsteb remi
 
 */
 
-
 public class Dubster {
     public static String songDecoder(String song) {
         if ( song==null || song.length()==0 || song.length()>200)
             return "";
         for (int i=0;i<song.length();i++){
-            final char candidate = song.charAt(i);
-            final boolean isAlphaOrPart = (candidate >= 'A' && candidate <= 'Z');
-            if (!isAlphaOrPart)
+            if (!Character.isUpperCase(song.charAt(i)))
                 return "";
         }
         final StringBuilder sbSong=new StringBuilder();
         String wub="WUB";
-        String s;
-        for (int i=0; i<=song.length();i++){
+
+        for (int i=0; i<song.length();i++){
             if (i<=(song.length()-wub.length())) {
                 String songPart = song.substring(i, i + wub.length());
                 if (songPart.equals(wub)) {
-                    int k=sbSong.length()-1; //charAt start from zero not one
-                    if (sbSong.length()>0 && sbSong.charAt(k)==' ') { //check for space, we need one
-                    s="";
-                    } else {
-                    s=" ";
-                    }
-                     sbSong.append(s);
-                    i = i + wub.length()-1;  //we found wub part, skip last chars
+                   String s= (sbSong.length()>0 && sbSong.charAt(sbSong.length()-1)==' ') ? "":" ";
+                   sbSong.append(s);
+                   i = i + wub.length()-1;  //we found wub part, skip other wub chars
                 } else {
                     sbSong.append(song.charAt(i));
                 }
+            } else {
+                sbSong.append(song.charAt(i));
             }
         }
        return sbSong.toString().trim(); //trim space before and after
