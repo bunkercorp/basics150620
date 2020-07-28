@@ -16,27 +16,22 @@ Note that the Java version expects a return value of null for an empty string or
 */
 public class JadenCase {
   public static String toJadenCase(String phrase) {
-      if ( phrase==null || phrase.length()<=0 )
-          return null;
+      if ( phrase==null || phrase.length()==0) return null;
       final StringBuilder resStr=new StringBuilder();
 //first char
-      final char firstChar = phrase.charAt(0);
-      final boolean isFirstAlpha = (firstChar >= 'a' && firstChar <= 'z' );
-      if (isFirstAlpha) {
-          char upperFirst = Character.toUpperCase(firstChar);
-          resStr.append(upperFirst);
+      if (Character.isLowerCase(phrase.charAt(0))) {
+          resStr.append(Character.toUpperCase(phrase.charAt(0)));
       }else {
-          resStr.append(firstChar);
+          resStr.append(phrase.charAt(0));
       }
-//rest char
+//
       for (int i=1;i<phrase.length();i++) {
           final char candidate = phrase.charAt(i);
           final char beforeCandidate = phrase.charAt(i-1);
-          final boolean isLowerAlpha =  (candidate >= 'a' && candidate <= 'z' );
-          final boolean isBeforeWordChar = (beforeCandidate >= 'A' && beforeCandidate <= 'Z') || (beforeCandidate >= 'a' && beforeCandidate <= 'z' ) || beforeCandidate=='`' || beforeCandidate== '_' || beforeCandidate=='-' || (beforeCandidate >='0' && beforeCandidate<= '9');
+          final boolean isLowerAlpha =  (Character.isLowerCase(candidate) );
+          final boolean isBeforeWordChar = Character.isLetterOrDigit(beforeCandidate) || beforeCandidate=='`' || beforeCandidate== '_' || beforeCandidate=='-';
           if ( isLowerAlpha && !isBeforeWordChar) {
-              char upperCandidate = Character.toUpperCase(candidate);
-              resStr.append(upperCandidate);
+              resStr.append(Character.toUpperCase(candidate));
           } else {
               resStr.append(candidate);
           }
