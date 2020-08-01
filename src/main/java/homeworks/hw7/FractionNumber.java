@@ -1,12 +1,20 @@
 package homeworks.hw7;
 
 public class FractionNumber {
+   // файналом закрыть бы?
     int numerator;
     int denominator;
 
     FractionNumber (int numer, int denom) {
         this.numerator = numer;
         this.denominator = denom;
+        /* как насчет чего-нибудь типа
+        if(denom < 0){
+        this.numerator*=-1;
+        this.denominator*=-1;
+        }
+        ? важно перекинуть знак из знаменателя в числитель же
+        */
         int signN=(numer<0) ? -1:1;
         int signD=(denom<0) ? -1:1;
         numer=numer*signN;
@@ -35,6 +43,7 @@ public class FractionNumber {
     FractionNumber add(FractionNumber a){
         int numer=this.numerator*a.denominator + a.numerator*this.denominator;
         int denom=this.denominator*a.denominator;
+        // return new FractionNumber(numer,denom);
         FractionNumber b=new FractionNumber(numer,denom);
         return b;
     }
@@ -73,6 +82,7 @@ public class FractionNumber {
             int b=numerator%denominator;
             return String.format("%d %d/%d", a*signN, b, denominator);
         }
+        // а вот не должно быть такой ситуации
         return "";
     }
 }
