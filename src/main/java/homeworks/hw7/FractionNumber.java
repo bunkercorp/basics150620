@@ -52,7 +52,7 @@ public class FractionNumber {
         }
 
         private FractionNumber _math(FractionNumber fraction, Operation op) {
-
+// о как )))
             if (fraction == null)
                 return new FractionNumber(this.devident, this.divisor);
 
