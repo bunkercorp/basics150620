@@ -20,6 +20,7 @@ import java.security.SecureRandom;
 public class NumberRotator {
 
     public static long rotate (long n) {
+       // не совсем согласен. ротация не имеет смысла не только при n=0, в принципе все одноразрядные значения так можно обработать
         if (n==0L)
         return 0;
         long max=n;

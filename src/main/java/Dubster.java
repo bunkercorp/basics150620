@@ -33,9 +33,11 @@ public class Dubster {
                 return "";
         }
         final StringBuilder sbSong=new StringBuilder();
+// final же
         String wub="WUB";
 
         for (int i=0; i<song.length();i++){
+             // это вычисление (song.length()-wub.length()) можно было бы оформить в константу перед циклом и не гонять процессор всякий раз
             if (i<=(song.length()-wub.length())) {
                 String songPart = song.substring(i, i + wub.length());
                 if (songPart.equals(wub)) {

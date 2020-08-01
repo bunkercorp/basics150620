@@ -27,6 +27,7 @@ public class SequenceSum {
     public static String showSequence(int value) {
         if (value<0)
             return value+" < 0";
+       // 0 как таковой мог бы быть обработан в твоем цикле. невалидными значениями являются только отрицательные числа
         if (value==0)
             return "0 = 0";
         final StringBuilder secString=new StringBuilder();
