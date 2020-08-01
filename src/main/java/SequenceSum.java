@@ -31,7 +31,8 @@ public class SequenceSum {
     public static String showSequence(int value) {
 
         if (value < 0) return value + " < 0";
-        else {
+       // else не имеет смысла после ифа с ретурном
+        // else {
             int sum = 0;
             StringBuilder result = new StringBuilder();
 
@@ -42,7 +43,7 @@ public class SequenceSum {
             }
 
             return result + " = " + sum;
-        }
+       // }
 
     }
 

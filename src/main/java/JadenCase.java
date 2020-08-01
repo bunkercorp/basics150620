@@ -21,6 +21,8 @@ public class JadenCase {
   public static String toJadenCase(String phrase) {
 
       StringBuilder capitalize = new StringBuilder();
+      // split был явно запрещен, о чем я оповестил перед лекцией.
+      // также, пробел - не единственный разделитель между словами
       String[] words = phrase.toLowerCase().split(" ");
       for (String word : words) {
           String first = word.substring(0, 1).toUpperCase();

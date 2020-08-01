@@ -32,12 +32,14 @@ public class Dubster {
     public static String songDecoder(String song) {
 
         char[] wub   = new char[]{ 'W', 'U', 'B' };
+        // зачем? строки имеют .length() и .charAt(int)
         char[] remix = song.toCharArray();
         char last    = '~';
 
         StringBuilder original = new StringBuilder();
 
         for (int i = 0; i < remix.length - 2;) {
+            // remix.substring(i, i+2) == "WUB" ?????
             if(remix[i] == wub[0] && remix[i+1] == wub[1] && remix[i+2] == wub[2]) {
                 if(last != ' ') {
                     last = ' ';

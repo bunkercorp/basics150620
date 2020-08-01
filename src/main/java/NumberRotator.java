@@ -25,6 +25,7 @@ public class NumberRotator {
     public static long rotate (long n) {
 
         long max    = n;
+        // круть.
         int  length = (int)(Math.log10(n) + 1);
 
         for (int i = 0; i < length; i++) {
