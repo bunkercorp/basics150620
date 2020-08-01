@@ -1,4 +1,5 @@
 public class FractionNumber {
+    // final, наверное?
     int numerator = 0;
     int denominator = 0;
 
@@ -18,6 +19,7 @@ public class FractionNumber {
             return new FractionNumber(0, 0);
         }
         ;
+        // gcd, ага. greatest common divisor
         int noz = noz(this.denominator, b.denominator);
         if (this.denominator < noz) {
             this.numerator = this.numerator * noz / this.denominator;
@@ -27,6 +29,7 @@ public class FractionNumber {
             b.numerator = b.numerator * noz / b.denominator;
             b.denominator = b.denominator * noz / b.denominator;
         }
+        // стек экономишь? =)
         int[] resultArr = new int[2];
         resultArr[0] = this.numerator + b.numerator;
         resultArr[1] = this.denominator;
@@ -120,6 +123,7 @@ public class FractionNumber {
     }
 
     private static boolean zeroCheck(int a, int b) {
+     // return a == 0 || b == 0;
         if (a == 0 || b == 0) {
             return true;
         } else {
@@ -133,7 +137,9 @@ public class FractionNumber {
     public String toString() {
         if (this.denominator == 1) {
             return this.numerator + "";
-        } else if (this.numerator > this.denominator) {
+        }
+        // порядок проверок имеет значение. что если numerator=2, denominator=0 ? Зайдем сюда. А не должны.
+        else if (this.numerator > this.denominator) {
             return  (int)(this.numerator / this.denominator) + " " + this.numerator % this.denominator + "/" + this.denominator;
         } else if (this.denominator == 0) {
             return "DIVISION BY ZERO";
