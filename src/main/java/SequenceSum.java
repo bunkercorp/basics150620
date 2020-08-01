@@ -23,10 +23,13 @@ Output: 0 = 0
 */
 
 public class SequenceSum {
+    //static String?
     public void showSequence(int value) {
         if (value == 0) {
+            // эта ситуация обрабатывается в твоем цикле
             System.out.print("0 = 0");
         } else if (value < 0) {
+            // "" лишнее
             System.out.print("" + value + " < 0");
         } else {
             int result = 0;

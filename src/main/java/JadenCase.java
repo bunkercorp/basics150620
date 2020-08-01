@@ -17,6 +17,7 @@ Note that the Java version expects a return value of null for an empty string or
 public class JadenCase {
 
     public static String toJadenCase(String phrase) {
+         // phrase.isEmpty()
         if (phrase == null || phrase == "") {
             return null;
         }
@@ -29,6 +30,7 @@ public class JadenCase {
             arrayOfChars[i] = currentChar;
             System.out.print(arrayOfChars[i]);
         }
+         // Зачем это здесь?
         System.out.println();
         for (int i = 0; i < l; i++) {
             if (i == 0) {
