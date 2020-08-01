@@ -9,6 +9,7 @@ abstract class Logger {
       protected static void  log (String str){
         final String metodName = Thread.currentThread().getStackTrace()[2].getMethodName();
         String dateStr=new SimpleDateFormat("HH:MM:ss:SSS").format(new Date());
+       // не согласен. твой логгер не знает ничего про консоль.
         System.out.printf("%d) %s [%s]: %s",counter++, dateStr,metodName, str);
 
     }
