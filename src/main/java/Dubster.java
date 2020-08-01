@@ -29,7 +29,8 @@ Return the words of the initial song that Polycarpus used to make a dubsteb remi
 public class Dubster {
 
       public static String songDecoder(String song) {
-        String str = "WUB";
+        // следует именовать сущности чуть более самодокументируемо. вместо str - wubConst , например. также, в ряде случаев не помешает final
+          String str = "WUB";
         int length = song.length();
         int begIndex1 = 0;
         int begIndex2 = 0;
@@ -42,7 +43,9 @@ public class Dubster {
 
         for(int i = 0; i < length ; i++){
             if ( song.regionMatches(begIndex1,str,begIndex2,str.length()) ){
-               if(flag == true) {
+
+                // if(flag){
+                if(flag == true) {
                    endWord = begIndex1;
                    songw[currentLength] = song.substring(begWord, endWord);
                    currentLength++;
@@ -75,6 +78,7 @@ public class Dubster {
                 }
             }
         }
+        // return songNew.toString();
         String result = songNew.toString();
         return result;
       }

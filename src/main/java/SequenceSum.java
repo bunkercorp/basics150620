@@ -25,11 +25,14 @@ Output: 0 = 0
 public class SequenceSum {
 
     public static String showSequence(int value) {
-    String result;
+     // StringBuilder был бы более удобен здесь
+        String result;
     int count = 0;
         if (value < 0)
+          // value + " < 0"
             result = "value < 0";
         else if (value == 0)
+            // value + " = 0"
             result = "value = 0";
         else {
             result = "0";

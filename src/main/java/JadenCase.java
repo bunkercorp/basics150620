@@ -103,6 +103,8 @@ public class JadenCase {
       System.out.println(toJadenCase("toJadenCase doesn't return a valide JadenCase String! try again please :)"));
       System.out.println(toJadenCase(""));
       System.out.println(toJadenCase( null));
+        // твой код добавляет пробел в конец фразы. Его там быть не должно.
+      System.out.printf("\"%s\"", toJadenCase("most trees are blue"));
     }
 
 

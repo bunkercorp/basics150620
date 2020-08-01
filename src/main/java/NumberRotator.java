@@ -19,6 +19,7 @@ max_rot(56789) should return 68957
 
      private static char[] shift(char[] ch, int begIndex,int endIndex) {
          for (int i = begIndex; i < endIndex; i++) {
+// напомню ,что массивы - это ссылочные сущности. В таких условиях, изменять входной агрумент может быть очень плохой идеей, так как он может использоваться где-нибудь еще.
              ch[i] = ch[i+1];
          }
          return ch;
@@ -36,12 +37,13 @@ max_rot(56789) should return 68957
    public static long rotate (long n) {
        long max = 0;
        String number = String.valueOf(n);
+       // магические числа вижу я
        long [] value = new long[4];
        char[] ch = new char[number.length()];
        for (int i = 0; i < number.length(); i++) {
            ch[i] = number.charAt(i);
        }
-
+    // вижу копипаст. почему не циклом?
        char prom = ch[0];
        shift(ch,0,ch.length -1);
        ch[ch.length -1] = prom;
