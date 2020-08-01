@@ -1,6 +1,7 @@
 package homework.hw7;
 
 public class FractionNumber {
+   // public final?
     private int a;
     private int b;
 
@@ -13,8 +14,10 @@ public class FractionNumber {
     }
 
     public FractionNumber add(FractionNumber number) {
+        //         this.a * number.b + this.b * number.a;
         int numerator = this.a * number.getB() + this.b * number.getA();
         int denominator = this.b * number.getB();
+        // return new FractionNumber(numerator, denominator);
         FractionNumber result = new FractionNumber(numerator, denominator);
         return result;
     }
@@ -42,6 +45,7 @@ public class FractionNumber {
 
     public String toString() {
         String s ="";
+        // порядок проверок имеет значение. Что если a=-2, b=0? Зайдем сюда. А не должны.
         if (this.getA() < this.getB()) {
             s = String.format("%d/%d", this.getA(), this.getB());
         }
@@ -54,6 +58,7 @@ public class FractionNumber {
         if(this.getB() == 1){
             s = String.format("%d", this.getA());
         }
+
         if(this.getB() == 0){
             s ="DIVISION BY ZERO";
         }
