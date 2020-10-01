@@ -1,9 +1,16 @@
 package main;
 
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MalformedURLException {
         if (args.length > 0) {
             System.out.println("Arguments");
             for (String arg : args) System.out.println("\t" + arg);
@@ -13,5 +20,11 @@ public class Main {
             System.out.println("JVM props");
             jvmProps.forEach((key, value) -> System.out.printf("\t%s=%s\n", key, value));
         }
+        final String browserName = System.getProperty("browser");
+        Capabilities caps = DesiredCapabilities.chrome();
+        System.out.println(caps.getBrowserName());
+        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.2.69:4444/wd/hub"), caps);
+
+        driver.get("https://google.com.ua");
     }
 }
