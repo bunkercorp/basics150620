@@ -2,6 +2,7 @@ package main;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -21,7 +22,7 @@ public class Main {
             jvmProps.forEach((key, value) -> System.out.printf("\t%s=%s\n", key, value));
         }
         final String browserName = System.getProperty("browser");
-        Capabilities caps = DesiredCapabilities.chrome();
+        Capabilities caps = new ChromeOptions();
         System.out.println(caps.getBrowserName());
         WebDriver driver = new RemoteWebDriver(new URL("http://192.168.2.69:4444/wd/hub"), caps);
 
