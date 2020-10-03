@@ -49,6 +49,9 @@ public class URL {
         }
 
         public Composer path(String str, String str1) throws InvalidParameterException {
+            // код
+            // (str == null) || (str == "")
+            // повторяется несколько раз в разных методах. Хорошо бы вынести эту проверку в однострочник
             if (((str == null) || (str == "")) && ((str1 == null) || (str1 == ""))) {
                 throw new InvalidParameterException("The path is not valid");
             } else if (newURL.path == null) {
@@ -133,6 +136,7 @@ public class URL {
             return this;
         }
 
+         // ты уверена, что тебе здесь не нужны никакие валидации?
         public URL compose() {
             return newURL;
         }
