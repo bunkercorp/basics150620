@@ -1,4 +1,4 @@
-/*
+package main;/*
 *Создать класс JiraIssue, реализуя паттерн Builder или производный.
 Класс должен предоставлять методы
 inProject(String projectKey)
