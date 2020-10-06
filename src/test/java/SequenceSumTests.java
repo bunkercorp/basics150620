@@ -1,3 +1,4 @@
+import Homeworks.HW6.SequenceSum;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
