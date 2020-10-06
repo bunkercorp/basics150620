@@ -44,12 +44,15 @@ public class JiraIssue  {
     @Override
     public String toString() {
         if (this.projectKey == null) {
+          // такая ситуация должна быть невозможной
             this.projectKey = "";
         }
         if (this.issueType == null) {
+            // такая ситуация должна быть невозможной
             this.issueType = "";
         }
         if (this.priority == null) {
+            // такая ситуация должна быть невозможной
             this.priority = "";
         }
         String sbLabels="";
@@ -68,6 +71,7 @@ public class JiraIssue  {
             this.summary = "";
         }
         //{"fields":{"project":{"key": "AQ"},"summary":"Oksana2","description":"deck3","issuetype":{"name": "Test"},"priority":{"name": "Lowest"},"labels":["label0","label10"]}}
+        // зачем джсон??
         return "{\"fields\":{\"project\":{\"key\": \"" + projectKey+"\"},\"summary\":\""+summary+"\",\"description\":\""+description+"\",\"issuetype\":{\"name\": \"" +issueType
                 +"\"},\"priority\":{\"name\": \""+priority+"\"},\"labels\":[\""+labels.get(0)+sbLabels+"\"]}}"
                 ;
@@ -116,7 +120,7 @@ public class JiraIssue  {
             System.out.println(jo.getString("name"));
         }*/
 
-
+                // хардкод не годится
                 JSONObject payload1 = new JSONObject();
                 JSONObject fields = new JSONObject();
                 fields.put("project", new JSONObject().put("key", "AQ"));
@@ -129,6 +133,7 @@ public class JiraIssue  {
 
 
                 HttpHelper.Response postTry=HttpHelper.sendRequest( HttpHelper.Verb.POST,"https://jira.ithillel.com/rest/api/2/issue/", new Hashtable<String, String>(){{
+                    // креды в гите? ну-ну =)
                     put ("Authorization", String.format("Basic %s", Base64.encodeBase64String(("oku.prebeta:51424651".getBytes()))));
                 }}, payload1);
                 System.out.println(postTry); //use
