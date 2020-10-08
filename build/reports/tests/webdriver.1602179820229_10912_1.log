@@ -1,0 +1,200 @@
+[1602179820.394][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 22628
+[1602179820.394][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1602179821.096][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\silen\\IdeaProjects\\dolphine\\build\\downloads\\1602179819459_10912_1",
+               "plugins.always_open_pdf_externally": true
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\silen\\IdeaProjects\\dolphine\\build\\downloads\\1602179819459_10912_1",
+            "plugins.always_open_pdf_externally": true
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1602179821.102][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\silen\\IdeaProjects\\dolphine\\build\\downloads\\1602179819459_10912_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1602179821.112][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1602179821.114][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\silen\AppData\Local\Temp\scoped_dir10740_591708314" data:,
+[1602179821.813][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1602179823.859][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1602179825.904][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.75",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\silen\\AppData\\Local\\Temp\\scoped_dir10740_591708314"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:55361"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "875b93f2d1090cc659a5fc2ef6430a0f"
+}
+[1602179825.960][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND MaximizeWindow {
+
+}
+[1602179825.960][INFO]: Waiting for pending navigations...
+[1602179825.963][INFO]: Done waiting for pending navigations. Status: ok
+[1602179826.085][INFO]: Waiting for pending navigations...
+[1602179826.086][INFO]: Done waiting for pending navigations. Status: ok
+[1602179826.086][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE MaximizeWindow {
+   "height": 840,
+   "width": 1552,
+   "x": -8,
+   "y": -8
+}
+[1602179826.094][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1602179826.094][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE SetTimeouts
+[1602179826.103][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND Navigate {
+   "url": "https://www.booking.com/"
+}
+[1602179826.103][INFO]: Waiting for pending navigations...
+[1602179826.104][INFO]: Done waiting for pending navigations. Status: ok
+[1602179826.656][INFO]: Waiting for pending navigations...
+[1602179828.610][INFO]: Done waiting for pending navigations. Status: ok
+[1602179828.610][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE Navigate
+[1602179828.650][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND FindElement {
+   "using": "css selector",
+   "value": "[type=\"search\"]"
+}
+[1602179828.651][INFO]: Waiting for pending navigations...
+[1602179828.651][INFO]: Done waiting for pending navigations. Status: ok
+[1602179828.664][INFO]: Waiting for pending navigations...
+[1602179828.665][INFO]: Done waiting for pending navigations. Status: ok
+[1602179828.665][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "24247210-94ec-4d47-8e53-03235db9d874"
+}
+[1602179828.679][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND TypeElement {
+   "id": "24247210-94ec-4d47-8e53-03235db9d874",
+   "text": "BArcelona, Catalonia, Spain",
+   "value": [ "B", "A", "r", "c", "e", "l", "o", "n", "a", ",", " ", "C", "a", "t", "a", "l", "o", "n", "i", "a", ",", " ", "S", "p", "a", "i", "n" ]
+}
+[1602179828.679][INFO]: Waiting for pending navigations...
+[1602179828.681][INFO]: Done waiting for pending navigations. Status: ok
+[1602179828.849][INFO]: Waiting for pending navigations...
+[1602179828.870][INFO]: Done waiting for pending navigations. Status: ok
+[1602179828.870][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE TypeElement
+[1602179829.406][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\\\"frm\\\"]/div[1]/div[2]/div[1]"
+}
+[1602179829.406][INFO]: Waiting for pending navigations...
+[1602179829.441][INFO]: Done waiting for pending navigations. Status: ok
+[1602179829.457][INFO]: Waiting for pending navigations...
+[1602179829.458][INFO]: Done waiting for pending navigations. Status: ok
+[1602179829.458][INFO]: [875b93f2d1090cc659a5fc2ef6430a0f] RESPONSE FindElement ERROR invalid selector: Unable to locate an element with the xpath expression //*[@id=\"frm\"]/div[1]/div[2]/div[1] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id=\"frm\"]/div[1]/div[2]/div[1]' is not a valid XPath expression.
+  (Session info: chrome=86.0.4240.75)
